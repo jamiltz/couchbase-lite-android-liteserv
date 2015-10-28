@@ -31,29 +31,34 @@ dependencies {
 
     compile fileTree(dir: 'libs', include: '*.jar')
 
-    compile buildLiteServWithArtifacts == null ?
-            project(':libraries:couchbase-lite-java-core') :
-            'com.couchbase.lite:couchbase-lite-java-core:' + System.getenv("MAVEN_UPLOAD_VERSION")
+    compile 'com.couchbase.lite:couchbase-lite-java-core:1.1.0'
+    compile 'com.couchbase.lite:couchbase-lite-java-listener:1.1.0'
+    compile 'com.couchbase.lite:couchbase-lite-android:1.1.0'
+    compile 'com.couchbase.lite:couchbase-lite-java-javascript:1.1.0'
 
-    compile buildLiteServWithArtifacts == null ?
-            project(':libraries:couchbase-lite-java-forestdb') :
-            'com.couchbase.lite:couchbase-lite-java-forestdb:' + System.getenv("MAVEN_UPLOAD_VERSION")
-
-    compile buildLiteServWithArtifacts == null ?
-            project(':libraries:couchbase-lite-java-sqlcipher') :
-            'com.couchbase.lite:couchbase-lite-java-sqlcipher:' + System.getenv("MAVEN_UPLOAD_VERSION")
-
-    compile buildLiteServWithArtifacts == null ?
-            project(':libraries:couchbase-lite-android') :
-            'com.couchbase.lite:couchbase-lite-android:' + System.getenv("MAVEN_UPLOAD_VERSION")
-
-    compile buildLiteServWithArtifacts == null ?
-            project(':libraries:couchbase-lite-java-javascript') :
-            'com.couchbase.lite:couchbase-lite-java-javascript:' + System.getenv("MAVEN_UPLOAD_VERSION")
-
-    compile buildLiteServWithArtifacts == null ?
-            project(':libraries:couchbase-lite-java-listener') :
-            'com.couchbase.lite:couchbase-lite-java-listener:' + System.getenv("MAVEN_UPLOAD_VERSION")
+//    compile buildLiteServWithArtifacts == null ?
+//            project(':libraries:couchbase-lite-java-core') :
+//            'com.couchbase.lite:couchbase-lite-java-core:' + System.getenv("MAVEN_UPLOAD_VERSION")
+//
+//    compile buildLiteServWithArtifacts == null ?
+//            project(':libraries:couchbase-lite-java-forestdb') :
+//            'com.couchbase.lite:couchbase-lite-java-forestdb:' + System.getenv("MAVEN_UPLOAD_VERSION")
+//
+//    compile buildLiteServWithArtifacts == null ?
+//            project(':libraries:couchbase-lite-java-sqlcipher') :
+//            'com.couchbase.lite:couchbase-lite-java-sqlcipher:' + System.getenv("MAVEN_UPLOAD_VERSION")
+//
+//    compile buildLiteServWithArtifacts == null ?
+//            project(':libraries:couchbase-lite-android') :
+//            'com.couchbase.lite:couchbase-lite-android:' + System.getenv("MAVEN_UPLOAD_VERSION")
+//
+//    compile buildLiteServWithArtifacts == null ?
+//            project(':libraries:couchbase-lite-java-javascript') :
+//            'com.couchbase.lite:couchbase-lite-java-javascript:' + System.getenv("MAVEN_UPLOAD_VERSION")
+//
+//    compile buildLiteServWithArtifacts == null ?
+//            project(':libraries:couchbase-lite-java-listener') :
+//            'com.couchbase.lite:couchbase-lite-java-listener:' + System.getenv("MAVEN_UPLOAD_VERSION")
 
 }
 

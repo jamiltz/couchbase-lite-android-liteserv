@@ -14,14 +14,13 @@ import com.couchbase.lite.android.AndroidContext;
 import com.couchbase.lite.javascript.JavaScriptViewCompiler;
 import com.couchbase.lite.listener.Credentials;
 import com.couchbase.lite.listener.LiteListener;
-import com.couchbase.lite.listener.LiteServlet;
 
 import java.io.IOException;
 
 public class MainActivity extends Activity {
 
     private static final int DEFAULT_LISTEN_PORT = 5984;
-    private static final String DATABASE_NAME = "cblite-test";
+    private static final String DATABASE_NAME = "skybook";
     private static final String LISTEN_PORT_PARAM_NAME = "listen_port";
 
     private static final String LISTEN_LOGIN_PARAM_NAME = "username";
@@ -74,11 +73,13 @@ public class MainActivity extends Activity {
         startDatabase(manager, DATABASE_NAME);
 
 
-        if (getLogin()!=null && getPassword()!=null){
-            allowedCredentials = new Credentials(getLogin(), getPassword());
-        } else{
-            allowedCredentials = new Credentials();
-        }
+//        if (getLogin()!=null && getPassword()!=null){
+//            allowedCredentials = new Credentials(getLogin(), getPassword());
+//        } else{
+//            allowedCredentials = new Credentials();
+//        }
+
+        allowedCredentials = new Credentials(null, null);
 
         LiteListener listener = new LiteListener(manager, suggestedListenPort, allowedCredentials);
 
